@@ -96,7 +96,7 @@ export class Contract {
       Buffer.from(serviceprovidersignatureUA).toString("base64");
 
     // Account ID of the smart contract
-    const scaccountid = "vaceituno20240225.testnet";
+    const scaccountid = "cableguard-org.testnet";
     // The server ulid can be used to disable the RODT via DNS TXT entry
     let ulidofserver = ulid();
     let serverulid = "bc=near.org;sc=" + scaccountid + ";id=" + ulidofserver;
