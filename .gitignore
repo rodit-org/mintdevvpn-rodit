@@ -43,6 +43,9 @@ account.env
 .env.test.local
 .env.production.local
 /.cache
+cgforge.log
+nohup.out
+output.txt
 
 npm-debug.log*
 /frontent/privkey.key
