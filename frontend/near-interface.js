@@ -7,6 +7,14 @@ const nacl = require("tweetnacl");
 // Gas needs to be understood tuned and optimized
 // const THIRTY_TGAS = '30000000000000';
 const THIRTY_TGAS = "12500000000000";
+
+function ensureDateIsSet(dateVar, defaultValue) {
+  if (!dateVar) {
+      return defaultValue;
+  }
+  return dateVar;
+}
+
 export class Contract {
   constructor({ contractId, walletToUse }) {
     this.contractId = contractId;
@@ -31,8 +39,6 @@ export class Contract {
     cidrblock,
     listenport,
     dns,
-    postup,
-    postdown,
     allowedips,
     subjectuniqueidentifierurl,
     kbpersecond,
@@ -96,11 +102,15 @@ export class Contract {
       Buffer.from(serviceprovidersignatureUA).toString("base64");
 
     // Account ID of the smart contract
-    const scaccountid = "cableguard-org.testnet";
+    const scaccountid = "frankevych-org.testnet";
     // The server ulid can be used to disable the RODT via DNS TXT entry
     let ulidofserver = ulid();
     let serverulid = "bc=near.org;sc=" + scaccountid + ";id=" + ulidofserver;
     // CG: 1970-01-01 is the default value for notafter and not before when not set
+    // This magic value is used by CGTUN to discard the value and not use it for validation
+    // Actually is not so magic is selected after checking UnixTime and X509 standards 
+    notafter = ensureDateIsSet(notafter, '1970-01-01');
+    notbefore = ensureDateIsSet(notbefore, '1970-01-01');
 
     // CG: ATTENTION: serverulid hardcoded temporarily to issuername instead of ulidofserver
     // to generate larger client RODiT sets. REVERSE the commenting of the following lines to rever to normal
@@ -122,8 +132,6 @@ export class Contract {
               cidr_block: ips[1], // The first IPv4 address in the ipaddressrange that does not end with 0
               listen_port: listenport,
               dns_server: dns, // does the server need this? A single IPv4 address chosen in the GUI
-              post_up: postup, // Server only, a common command chosen in in the GUI
-              post_down: postdown, // Server only, a common command chosen in in the GUI
               allowed_ips: "null", // Servers don't need this value
               subjectuniqueidentifier_url: subjectuniqueidentifierurl, // (Subject Unique Identifier X.509): A URL for the initial VPN server chosen in the GUI
               // CG: The following line prevents anchor Service Provider RODiT to be used for endpoints
@@ -167,8 +175,6 @@ export class Contract {
               cidr_block: ips[i+1], // Sequential ipaddress from the ipaddressrange
               listen_port: listenport,
               dns_server: dns,
-              post_up: "null", // Perhaps something like: sudo ip addr add 10.0.0.1/24 dev wg33
-              post_down: "null", // I don't think clients need postdown
               allowed_ips: allowedips,
               subjectuniqueidentifier_url: subjectuniqueidentifierurl,
               serviceprovider_id: serverulid, // Matches token_id for the server

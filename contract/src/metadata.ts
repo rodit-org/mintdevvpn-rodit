@@ -46,9 +46,6 @@ export class TokenMetadata {
   listenport?: string; // Port number, suggested random in the user interface
   dns?: string; // DNS IP Adress, empty by default in the user interface
   //    saveconfig: Option<Bool>, // This is not an applicable feature for Non fungible token based VPN Services
-  postup?: string; // Post Up command for the server, with a default in the user interface
-  //    predown:  string; // Pre Down ip command, future feature not for the POC
-  postdown?: string; // Post Down command for the server, with a default in the user interface
   allowedips?: string; // (Addr not Net because Borsh does not have a matching trait) Range of IP Addresses that clients can connect to, default "everywhere"
   subjectuniqueidentifierurl?: string; // Intial URL where the clients connect
   serviceproviderid?: string; // Non fungible token ID of the "author" of the set of Non fungible tokens created
@@ -66,8 +63,6 @@ export class TokenMetadata {
     cidr_block?: string,
     listen_port?: string,
     dns_server?: string,
-    post_up?: string,
-    post_down?: string,
     allowed_ips?: string,
     subjectuniqueidentifier_url?: string,
     serviceprovider_id?: string,
@@ -81,8 +76,6 @@ export class TokenMetadata {
       (this.cidrblock = cidr_block),
       (this.listenport = listen_port),
       (this.dns = dns_server),
-      (this.postup = post_up),
-      (this.postdown = post_down),
       (this.allowedips = allowed_ips),
       (this.subjectuniqueidentifierurl = subjectuniqueidentifier_url),
       (this.serviceproviderid = serviceprovider_id),

@@ -12,10 +12,6 @@ export const StepTwo = (props) => {
     cidrAddresses: "172.16.0.0/12",
     vpnPorts: "49194",
     dnsServerIp: "4.4.4.4",
-    postUpVpn:
-      "iptables -A FORWARD -i %i -j ACCEPT; iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE",
-    postDownVpn:
-      "iptables -D FORWARD -i %i -j ACCEPT; iptables -t nat -D POSTROUTING -o eth0 -j MASQUERADE",
   };
 
   return (
@@ -46,18 +42,6 @@ export const StepTwo = (props) => {
             name="dnsServerIp"
             type="text"
             placeholder=""
-          />
-          <Input
-            label="PostUp Server command"
-            name="postUpVpn"
-            type="text"
-            placeholder="iptables -A FORWARD -i %i -j ACCEPT; iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE"
-          />
-          <Input
-            label="PostDown Server command"
-            name="postDownVpn"
-            type="text"
-            placeholder="iptables -D FORWARD -i %i -j ACCEPT; iptables -t nat -D POSTROUTING -o eth0 -j MASQUERADE"
           />
 
           <div className="flex items-center justify-center gap-3 mt-4">

@@ -34,7 +34,7 @@ import {
 import { internalNftPayout, internalNftTransferPayout } from "./royalty";
 
 /// This spec can be treated like a version of the standard.
-export const NFT_METADATA_SPEC = "RODT-near.org-0.89.99";
+export const NFT_METADATA_SPEC = "RODT-near.org-0.91.91";
 
 /// This is the name of the NFT standard we're using
 export const NFT_STANDARD_NAME = "PENDING nepXXX";
@@ -55,7 +55,7 @@ export class Contract extends NearContract {
   constructor({
     owner_id,
     metadata = {
-      versionnumber: "RODT-near.org-0.89.99",
+      versionnumber: "RODT-near.org-0.91.91",
       name: "Cableguard FORGE",
       symbol: "CGRODT",
       base_uri: "cableguard.org",
@@ -87,8 +87,6 @@ export class Contract extends NearContract {
     cidr_block, // The first IPv4 address in the ipaddressrange
     listen_port,
     dns_server, // does the server need this? A single IPv4 address chosen in the GUI
-    post_up, // Server only, a common command chosen in in the GUI
-    post_down, // Server only, a common command chosen in in the GUI
     allowed_ips, // A common IPv4 range chosen in the GUI
     subjectuniqueidentifier_url, // (Subject Unique Identifier X.509): A single IPv4 address for the server chosen in the GUI
     serviceprovider_id, // serverserialnumber for the Server, the token_id value of the server for the Clients
@@ -106,8 +104,6 @@ export class Contract extends NearContract {
       cidr_block, // The first IPv4 address in the ipaddressrange
       listen_port,
       dns_server, // does the server need this? A single IPv4 address chosen in the GUI
-      post_up, // Server only, a common command chosen in in the GUI
-      post_down, // Server only, a common command chosen in in the GUI
       allowed_ips, // A common IPv4 range chosen in the GUI
       subjectuniqueidentifier_url, // (Subject Unique Identifier X.509): A single IPv4 address for the server chosen in the GUI
       serviceprovider_id, // serverserialnumber for the Server, the token_id value of the server for the Clients

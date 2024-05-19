@@ -14,10 +14,4 @@ export const formSchema = yup.object().shape({
     .positive()
     .integer()
     .required("Required"),
-  postUpVpn: yup
-    .string("Please enter a valid Post Up VPN command.")
-    .required("Required"),
-  postDownVpn: yup
-    .string("Please enter a valid Post Down VPN command.")
-    .required("Required"),
 })

@@ -56,8 +56,6 @@ Input values for:
 - IPv4 addresses range of the VPN clients: 10.0.0.1/24
 - Port where the VPN server listens: A random number between 49152 and 65535
 - DNS server IPv4 address: : No default value / IT CAN BE EMPTY
-- Post Up command for the VPN server: iptables -A FORWARD -i %i -j ACCEPT; iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
-- Post Down command for the VPN server: iptables -D FORWARD -i %i -j ACCEPT; iptables -t nat -D POSTROUTING -o eth0 -j MASQUERADE
 - Initial IPv4 address for VPN clients: 0.0.0.0/0, ::/0
 - IPv4 address of the VPN server where the clients connect: No default value
 - Maximum KB per second of each VPN connection: 100000

@@ -15,6 +15,6 @@ export const formSchema = yup.object().shape({
   vpnDescription: yup
     .string("Please enter a VPN description")
     .required("Required"),
-  expirationDate: yup.date().required("Required"),
-  startingDate: yup.date().required("Required"),
+  expirationDate: yup.date(), // .required("Required"),
+  startingDate: yup.date(), // .required("Required"),
 })
