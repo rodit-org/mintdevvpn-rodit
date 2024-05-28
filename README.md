@@ -63,9 +63,9 @@ Input values for:
 - Implicit account of the service provider in HEX: No default value
 
 # Cableguard Ecosystem
+# Cableguard Ecosystem
 - Cableguard TUN: VPN tunnels
 - Cableguard TOOLS: local VPN tunnel configuration
 - Cableguard FORGE: RODT minter
 - Cableguard WALLET: RODT manager
-- Cableguard AUTH: RODT authentication for interoperability with implementation of the Triangle of Trust.
-- Cableguard FIND: Server and peer finder
+
