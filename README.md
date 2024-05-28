@@ -1,6 +1,6 @@
 ![cableguard logo banner](./banner.png)
 
-## Cableguard API FORGE
+## Cableguard FORGE for creating RODit
 Cableguard FORGE creates sets of RODiT in testnet with all the configuration and subscription information necessary to set up Cableguard TUN VPN connections.
 
 Authentication between VPN clients and server uses PKC with a twist. Ownership of the RODTs doubled-checked with the NEAR Protocol in real time, and the PKC pair used is the pair of the RODT themselves.
