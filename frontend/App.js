@@ -20,7 +20,6 @@ const App = ({ isSignedIn, cableguardForge, wallet }) => {
     vpnPorts: "",
     dnsServerIp: "",
     allowedIPv4: "",
-    maximumKb: "",
     privateKey: "",
     account: "",
   });
@@ -76,7 +75,6 @@ const App = ({ isSignedIn, cableguardForge, wallet }) => {
       data.dnsServerIp,
       formData.allowedIPv4,
       formData.initialendpoint_url,
-      formData.maximumKb,
       formData.privateKey,
       formData.account
     );

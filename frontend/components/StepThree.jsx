@@ -12,7 +12,6 @@ export const StepThree = (props) => {
   const initialValues = {
     allowedIPv4: "0.0.0.0/0",
     initialendpoint_url: "",
-    maximumKb: "",
     privateKey: "",
     account: "",
   };
@@ -39,13 +38,6 @@ export const StepThree = (props) => {
               placeholder=""
             />
           </div>
-          <Input
-            label="Maximum KB per second"
-            name="maximumKb"
-            type="text"
-            placeholder="100000 "
-          />
-
           <Input
             label="Private Key in Base58"
             name="privateKey"

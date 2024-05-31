@@ -9,12 +9,6 @@ export const formSchema = yup.object().shape({
       "Please enter a valid subdomain URL (https:// is implicit)"
     )
     .required("Required"),
-  maximumKb: yup
-    .number("Please enter a number.")
-    .typeError("Please enter a number")
-    .positive()
-    .integer()
-    .required("Required"),
   privateKey: yup
     .string()
     .matches(
