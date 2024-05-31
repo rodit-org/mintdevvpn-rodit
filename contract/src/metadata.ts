@@ -50,7 +50,7 @@ export class TokenMetadata {
   subjectuniqueidentifierurl?: string; // Intial URL where the clients connect
   serviceproviderid?: string; // Non fungible token ID of the "author" of the set of Non fungible tokens created
   serviceprovidersignature?: string; //  Hash of the Non fungible token signed with serviceproviderid's publickey sourced from the blockchain
-  kbpersecond?: string; // Bandwith of the subscription in Kb/s, 1000000 by default in the user interfac
+  // kbpersecond?: string; // Bandwith of the subscription in Kb/s, 1000000 by default in the user interfac
   //    requestspersecond: Option<u64>, // Requests per second of the subscription, future feature not for the POC
   //    authorizedlocation:  string; // From what region the subscription is valid, future feature not for the POC
   //    authorizednetwork: Option<Ipv4Addr>, // From what network range the subscription is valid, future feature not for the POC
@@ -66,8 +66,7 @@ export class TokenMetadata {
     allowed_ips?: string,
     subjectuniqueidentifier_url?: string,
     serviceprovider_id?: string,
-    serviceprovider_signature?: string,
-    kb_persecond?: string
+    serviceprovider_signature?: string
   ) {
       (this.issuername = issuer_name),
       (this.description = description_rodt),
@@ -79,8 +78,7 @@ export class TokenMetadata {
       (this.allowedips = allowed_ips),
       (this.subjectuniqueidentifierurl = subjectuniqueidentifier_url),
       (this.serviceproviderid = serviceprovider_id),
-      (this.serviceprovidersignature = serviceprovider_signature),
-      (this.kbpersecond = kb_persecond);
+      (this.serviceprovidersignature = serviceprovider_signature);
   }
 }
 
