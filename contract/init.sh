@@ -1,4 +1,4 @@
 #!/bin/bash
 
 # initilize the contract
-near call $NFTCONTRACTID init '{"owner_id": "'$NFTCONTRACTID'"}' --accountId $NFTCONTRACTID
+near call $RODITCONTRACTID init '{"owner_id": "'$RODITCONTRACTID'"}' --accountId $RODITCONTRACTID

@@ -1,5 +1,5 @@
 #!/bin/bash
 
 # deploy the contract
-#near deploy --accountId $NFTCONTRACTID --wasmFile build/contract.wasm
-near deploy $NFTCONTRACTID  --wasmFile build/contract.wasm
+#near deploy --accountId $RODITCONTRACTID --wasmFile build/contract.wasm
+near deploy $RODITCONTRACTID  --wasmFile build/contract.wasm

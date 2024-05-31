@@ -26,7 +26,6 @@ Read more here https://vaceituno.medium.com/unleashing-the-power-of-public-key-c
 - npm run deploy
 
 ## 3. Initialize the Contract
-- export NFTCONTRACTID=$(cat ./contract/neardev/dev-account)
 - npm run init
 
 ## 4. Start the Front End

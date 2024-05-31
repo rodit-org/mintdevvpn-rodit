@@ -25,11 +25,11 @@ echo "export NEAR_ENV=\"$NEAR_ENV\"" >> ~/.bashrc
 # Display a message
 #!/bin/bash
 
-# If NFTCONTRACTID is not set, set it to "UNKNOWN"
-: "${NFTCONTRACTID:=UNKNOWN}"
+# If RODITCONTRACTID is not set, set it to "UNKNOWN"
+: "${RODITCONTRACTID:=UNKNOWN}"
 
-VERSION="1.1.0"
-echo "Cableguard WALLET install, Version $VERSION running on $BLOCKCHAIN_ENV at Smart Contract $NFTCONTRACTID. Get help with: $0 help"
+VERSION="1.3.0"
+echo "Cableguard WALLET install, Version $VERSION running on $BLOCKCHAIN_ENV at Smart Contract $RODITCONTRACTID. Get help with: $0 help"
 echo "npm, jq, nodejs and near CLI will be installed"
 
 export LC_ALL=C
@@ -81,6 +81,6 @@ echo "Now you can use rodwallet.sh"
 #chmod 400 your_file
 
 echo "Please write down the account number, you can use it to configue Cableguard TUN"
-echo "You can use RODTWALLET as follows, if you have the correct network and smartcontract set in the NFTCONTRACTID env variable"
+echo "You can use RODTWALLET as follows, if you have the correct network and smartcontract set in the RODITCONTRACTID env variable"
 
 ~/cgwallet/rodtwallet.sh help
