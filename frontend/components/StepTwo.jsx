@@ -10,8 +10,8 @@ export const StepTwo = (props) => {
 
   const initialValues = {
     cidrAddresses: "172.16.0.0/12",
-    vpnPorts: "49194",
-    dnsServerIp: "4.4.4.4",
+    vpnPorts: "34543",
+    dnsServerIp: "1.1.1.1",
   };
 
   return (
@@ -33,7 +33,7 @@ export const StepTwo = (props) => {
               label="Server Vpn Ports"
               name="vpnPorts"
               type="text"
-              placeholder="49194"
+              placeholder="34543"
             />
           </div>
 
