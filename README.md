@@ -3,7 +3,7 @@
 ## Cableguard FORGE for creating RODit
 Cableguard FORGE creates sets of RODiT in testnet with all the configuration and subscription information necessary to set up Cableguard TUN VPN connections.
 
-Authentication between VPN clients and server uses PKC with a twist. Ownership of the RODTs doubled-checked with the NEAR Protocol in real time, and the PKC pair used is the pair of the RODT themselves.
+Authentication between VPN clients and server uses PKC with a twist. Ownership of the RODTs doubled-checked with the NEAR Protocol in real time, and the PKC pair used is the pair of the RODiT themselves.
 Read more here https://vaceituno.medium.com/unleashing-the-power-of-public-key-cryptography-with-non-fungible-tokens-513286d47524
 
 ## 0. Pre requisites
@@ -65,6 +65,6 @@ Input values for:
 # Cableguard Ecosystem
 - Cableguard TUN: VPN tunnels
 - Cableguard TOOLS: local VPN tunnel configuration
-- Cableguard FORGE: RODT minter
-- Cableguard WALLET: RODT manager
+- Cableguard FORGE: RODiT minter
+- Cableguard WALLET: RODiT manager
 

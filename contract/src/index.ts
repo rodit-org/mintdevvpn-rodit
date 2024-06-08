@@ -13,7 +13,7 @@ import {
 } from "./metadata";
 import { internalMint } from "./mint";
 import {
-  internalrodtTokens,
+  internalroditTokens,
   internalSupplyForOwner,
   internalTokensForOwner,
   internalTotalSupply,
@@ -34,7 +34,7 @@ import {
 import { internalNftPayout, internalNftTransferPayout } from "./royalty";
 
 /// This spec can be treated like a version of the standard.
-export const NFT_METADATA_SPEC = "RODT-near.org-0.94.02";
+export const NFT_METADATA_SPEC = "RODiT-near.org-0.94.02";
 
 /// This is the name of the NFT standard we're using
 export const NFT_STANDARD_NAME = "PENDING nepXXX";
@@ -55,7 +55,7 @@ export class Contract extends NearContract {
   constructor({
     owner_id,
     metadata = {
-      versionnumber: "RODT-near.org-0.94.02",
+      versionnumber: "RODiT-near.org-0.94.02",
       name: "Cableguard FORGE",
       symbol: "CGRODT",
       base_uri: "cableguard.org",
@@ -81,7 +81,7 @@ export class Contract extends NearContract {
   nft_mint({
     token_id, // (Serial Number X.509): Random ULID
     issuer_name, // (Issuer Name X.509): Common issuer_name chosen in the GUI
-    description_rodt, // Common description chosen in the GUI
+    description_rodit, // Common description chosen in the GUI
     not_after, // (Not After X.509): Date greater than starts_at. Value 0 for “any” as per X.509
     not_before, // (Not Before X.509): Date, with Value 0 for “any” as per X.509
     cidr_block, // The first IPv4 address in the ipaddressrange
@@ -94,11 +94,11 @@ export class Contract extends NearContract {
     // kb_persecond, // null for the Server, a common number chosen in the GUI
     // authorizedlocation:  string; // From what region the subscription is valid, future feature not for the POC
     // authorizednetwork: Option<Ipv4Addr>, // From what network range the subscription is valid, future feature not for the POC
-    owneraccount_id, // This is the owner of the rodtparently, but I assumed it would be the wallet logged in
+    owneraccount_id, // This is the owner of the roditparently, but I assumed it would be the wallet logged in
   }) {
     const metadata = new TokenMetadata(
       issuer_name, // (Issuer Name X.509): Common issuer_name chosen in the GUI
-      description_rodt, // Common description chosen in the GUI
+      description_rodit, // Common description chosen in the GUI
       not_after, // (Not After X.509): Date greater than starts_at. Value 0 for “any” as per X.509
       not_before, // (Not Before X.509): Date, with Value 0 for “any” as per X.509
       cidr_block, // The first IPv4 address in the ipaddressrange
@@ -125,7 +125,7 @@ export class Contract extends NearContract {
   }
 
   @call
-  //implementation of the nft_transfer method. This transfers the RODT from the current owner to the receiver.
+  //implementation of the nft_transfer method. This transfers the RODiT from the current owner to the receiver.
   nft_transfer({ receiver_id, token_id, approval_id, memo }) {
     return internalNftTransfer({
       contract: this,
@@ -137,7 +137,7 @@ export class Contract extends NearContract {
   }
 
   @call
-  //implementation of the transfer call method. This will transfer the RODT and call a method on the receiver_id contract
+  //implementation of the transfer call method. This will transfer the RODiT and call a method on the receiver_id contract
   nft_transfer_call({ receiver_id, token_id, approval_id, memo, msg }) {
     return internalNftTransferCall({
       contract: this,
@@ -257,9 +257,9 @@ export class Contract extends NearContract {
   }
 
   @view
-  //Query for RODT tokens on the contract regardless of the owner using pagination
+  //Query for RODiT tokens on the contract regardless of the owner using pagination
   nft_tokens({ from_index, limit }) {
-    return internalrodtTokens({
+    return internalroditTokens({
       contract: this,
       fromIndex: from_index,
       limit: limit,

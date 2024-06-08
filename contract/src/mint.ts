@@ -47,7 +47,7 @@ export function internalMint(
   });
 
   // Insert the token ID and token struct and make sure that the token doesn't exist
-  assert(!contract.tokensById.containsKey(tokenId), "RODT already exists");
+  assert(!contract.tokensById.containsKey(tokenId), "RODiT already exists");
   contract.tokensById.set(tokenId, token);
 
   // Insert the token ID and metadata
@@ -63,7 +63,7 @@ export function internalMint(
   let nftMintLog = {
     // Standard name ("PENDING nepXXX").
     standard: NFT_STANDARD_NAME,
-    // Version of the standard ("RODT-near.org-0.94.02").
+    // Version of the standard ("RODiT-near.org-0.94.02").
     version: NFT_METADATA_SPEC,
     // The data related with the event stored in a vector.
     event: "nft_mint",

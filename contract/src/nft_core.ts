@@ -77,7 +77,7 @@ export function internalNftTransfer({
   );
 }
 
-//implementation of the transfer call method. This will transfer the RODT and call a method on the receiver_id contract
+//implementation of the transfer call method. This will transfer the RODiT and call a method on the receiver_id contract
 export function internalNftTransferCall({
   contract,
   receiverId,
@@ -260,7 +260,7 @@ export function internalResolveTransfer({
   contract.tokensById.set(tokenId, token);
 
   /*
-        We need to log that the RODT was reverted back to the original owner.
+        We need to log that the RODiT was reverted back to the original owner.
         The old_owner_id will be the receiver and the new_owner_id will be the
         original owner of the token since we're reverting the transfer.
     */
@@ -269,7 +269,7 @@ export function internalResolveTransfer({
   let nftTransferLog = {
     // Standard name ("PENDING nepXXX").
     standard: NFT_STANDARD_NAME,
-    // Version of the standard ("RODT-near.org-0.94.02").
+    // Version of the standard ("RODiT-near.org-0.94.02").
     version: NFT_METADATA_SPEC,
     // The data related with the event stored in a vector.
     event: "nft_transfer",
