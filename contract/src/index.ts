@@ -34,7 +34,7 @@ import {
 import { internalNftPayout, internalNftTransferPayout } from "./royalty";
 
 /// This spec can be treated like a version of the standard.
-export const NFT_METADATA_SPEC = "RODT-near.org-0.93.01";
+export const NFT_METADATA_SPEC = "RODT-near.org-0.94.02";
 
 /// This is the name of the NFT standard we're using
 export const NFT_STANDARD_NAME = "PENDING nepXXX";
@@ -55,7 +55,7 @@ export class Contract extends NearContract {
   constructor({
     owner_id,
     metadata = {
-      versionnumber: "RODT-near.org-0.93.01",
+      versionnumber: "RODT-near.org-0.94.02",
       name: "Cableguard FORGE",
       symbol: "CGRODT",
       base_uri: "cableguard.org",

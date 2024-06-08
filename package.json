@@ -1,6 +1,6 @@
 {
   "name": "cableguardforge",
-  "version": "0.93.01",
+  "version": "0.94.02",
   "license": "(MIT AND Apache-2.0)",
   "scripts": {
     "start": "cd frontend && npm run start",

@@ -63,7 +63,7 @@ export function internalMint(
   let nftMintLog = {
     // Standard name ("PENDING nepXXX").
     standard: NFT_STANDARD_NAME,
-    // Version of the standard ("RODT-near.org-0.93.01").
+    // Version of the standard ("RODT-near.org-0.94.02").
     version: NFT_METADATA_SPEC,
     // The data related with the event stored in a vector.
     event: "nft_mint",
