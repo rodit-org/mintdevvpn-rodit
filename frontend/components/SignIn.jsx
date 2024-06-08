@@ -16,7 +16,7 @@ export default function SignIn({ sign }) {
         <main className="flex items-center justify-center  py-8 sm:px-12 lg:col-span-7 lg:py-12 lg:px-16 xl:col-span-6">
           <div className="max-w-xl lg:max-w-3xl">
             <h1 className="mt-6 text-2xl tracking-wide font-bold text-gray-900 sm:text-3xl md:text-4xl">
-              Cableguard Forge
+              Cableguard FORGE testnet
             </h1>
 
             <p className="mt-4 leading-relaxed w-80 text-gray-500">
