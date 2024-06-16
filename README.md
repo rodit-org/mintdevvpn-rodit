@@ -62,9 +62,7 @@ Input values for:
 - Implicit account of the service provider in HEX: No default value
 
 # Cableguard Ecosystem
-# Cableguard Ecosystem
-- Cableguard TUN: VPN tunnels
-- Cableguard TOOLS: local VPN tunnel configuration
-- Cableguard FORGE: RODT minter
-- Cableguard WALLET: RODT manager
-
+    Cableguard RODITVPN: RODiT and VPN manager
+    Cableguard TOOLS: local VPN tunnel configuration
+    Cableguard TUN: VPN tunnels
+    Cableguard FORGE: RODiT minter
