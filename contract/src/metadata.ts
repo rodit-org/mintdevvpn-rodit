@@ -8,7 +8,7 @@ export class Payout {
   }
 }
 
-export class RodtContractMetadata {
+export class RoditContractMetadata {
   versionnumber: string;
   name: string;
   symbol: string;
@@ -28,11 +28,11 @@ export class RodtContractMetadata {
     //            icon?: string,
     baseUri?: string;
   }) {
-    this.versionnumber = versionnumber; // required, "Cableguard RODT 0.1"
-    this.name = name; // required, "RODT"
+    this.versionnumber = versionnumber; // required, "Cableguard RODiT 0.1"
+    this.name = name; // required, "RODiT"
     this.symbol = symbol; // required, "CG"
     //        this.icon = icon // Data URL
-    this.issueruniqueidentifierURL = baseUri; // Gateway to find RODT validators
+    this.issueruniqueidentifierURL = baseUri; // Gateway to find RODiT validators
   }
 }
 
@@ -57,7 +57,7 @@ export class TokenMetadata {
 
   constructor(
     issuer_name?: string,
-    description_rodt?: string,
+    description_rodit?: string,
     not_after?: string,
     not_before?: string,
     cidr_block?: string,
@@ -69,7 +69,7 @@ export class TokenMetadata {
     serviceprovider_signature?: string
   ) {
       (this.issuername = issuer_name),
-      (this.description = description_rodt),
+      (this.description = description_rodit),
       (this.notafter = not_after),
       (this.notbefore = not_before),
       (this.cidrblock = cidr_block),
@@ -149,6 +149,6 @@ export function internalNftMetadata({
   contract,
 }: {
   contract: Contract;
-}): RodtContractMetadata {
+}): RoditContractMetadata {
   return contract.metadata;
 }

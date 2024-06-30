@@ -20,7 +20,7 @@ export default function SignIn({ sign }) {
             </h1>
 
             <p className="mt-4 leading-relaxed w-80 text-gray-500">
-              Create here your RODT sets for your VPN Clients
+              Create here your RODiT sets for your VPN Clients
             </p>
             <div className="mt-4 sm:mt-8" onClick={sign}>
               <a

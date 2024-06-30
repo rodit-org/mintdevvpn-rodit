@@ -76,11 +76,11 @@ fi
 echo "Installation of npm, jq, nodejs and near cli probably completed successfully."
 echo "Now you can use rodwallet.sh"
 
-~/cgwallet/rodtwallet.sh genaccount
+~/cgwallet/roditwallet.sh genaccount
 
 #chmod 400 your_file
 
 echo "Please write down the account number, you can use it to configue Cableguard TUN"
-echo "You can use RODTWALLET as follows, if you have the correct network and smartcontract set in the RODITCONTRACTID env variable"
+echo "You can use RODiTWALLET as follows, if you have the correct network and smartcontract set in the RODITCONTRACTID env variable"
 
-~/cgwallet/rodtwallet.sh help
+~/cgwallet/roditwallet.sh help

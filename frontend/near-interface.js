@@ -22,15 +22,15 @@ export class Contract {
   }
 
   // Lists tokens regardless of owner
-  async listrodts() {
-    const Rodts = await this.wallet.viewMethod({
+  async listrodits() {
+    const Rodits = await this.wallet.viewMethod({
       contractId: this.contractId,
       method: "nft_tokens",
     });
-    return Rodts;
+    return Rodits;
   }
 
-  async addRODTset(
+  async addRODiTset(
     numberofclients,
     issuername,
     description,
@@ -46,7 +46,7 @@ export class Contract {
     owneraccountid
   ) {
     // The following line should calculate the fee
-    const deposit = utils.format.parseNearAmount("0.1"); // Where 0.1 is the fee per RODT minted
+    const deposit = utils.format.parseNearAmount("0.1"); // Where 0.1 is the fee per RODiT minted
 
     // Generating the list of valid IPs for the range
     function generateIPs(cidrblock, numberofclients) {
@@ -103,7 +103,7 @@ export class Contract {
 
     // Account ID of the smart contract
     const scaccountid = "cableguard-org.testnet";
-    // The server ulid can be used to disable the RODT via DNS TXT entry
+    // The server ulid can be used to disable the RODiT via DNS TXT entry
     let ulidofserver = ulid();
     let serverulid = "bc=near.org;sc=" + scaccountid + ";id=" + ulidofserver;
     // CG: 1970-01-01 is the default value for notafter and not before when not set
@@ -126,7 +126,7 @@ export class Contract {
             args: {
               token_id: serverulid, // (Serial Number X.509): Random ULID
               issuer_name: issuername, // (Issuer Name X.509): Common issuername chosen in the GUI
-              description_rodt: description, // Common description chosen in the GUI
+              description_rodit: description, // Common description chosen in the GUI
               not_after: notafter, // (Not After X.509): Date greater than starts_at. Value 0 for “any” as per X.509
               not_before: notbefore, // (Not Before X.509): Date, with Value 0 for “any” as per X.509
               cidr_block: ips[1], // The first IPv4 address in the ipaddressrange that does not end with 0
@@ -137,11 +137,11 @@ export class Contract {
               // CG: The following line prevents anchor Service Provider RODiT to be used for endpoints
               serviceprovider_id: ulidofserver, // serverserialnumber for the Server, the token_id value of the server for the Clients
               serviceprovider_signature: 0 /* Certificate Signature X.509): Server: Ed25519 digital signature ( SHA384WITHECDSA ) calculated from all the other
-              fields of the rodtsigned with the serverprivatekey */,
+              fields of the roditsigned with the serverprivatekey */,
               // kb_persecond: "null", // null for the Server, a common number chosen in the GUI
               // authorizedlocation:  string; // From what region the subscription is valid, future feature not for the POC
               // authorizednetwork: Option<Ipv4Addr>, // From what network range the subscription is valid, future feature not for the POC
-              owneraccount_id: owneraccountid, // This is the owner of the rodtparently, but I assumed it would be the wallet logged in
+              owneraccount_id: owneraccountid, // This is the owner of the roditparently, but I assumed it would be the wallet logged in
             },
             gas,
             deposit,
@@ -169,7 +169,7 @@ export class Contract {
             args: {
               token_id: clientulid,
               issuer_name: issuername,
-              description_rodt: description,
+              description_rodit: description,
               not_after: notafter,
               not_before: notbefore,
               cidr_block: ips[i+1], // Sequential ipaddress from the ipaddressrange

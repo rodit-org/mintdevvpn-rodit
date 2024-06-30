@@ -14,8 +14,8 @@ export function internalTotalSupply({
   return contract.tokenMetadataById.len();
 }
 
-//Query for RODT tokens on the contract regardless of the owner using pagination
-export function internalrodtTokens({
+//Query for RODiT tokens on the contract regardless of the owner using pagination
+export function internalroditTokens({
   contract,
   fromIndex,
   limit,

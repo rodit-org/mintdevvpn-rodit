@@ -1,8 +1,8 @@
 import "regenerator-runtime/runtime";
 import React, { useState, useEffect } from "react";
-import RODTForm from "./components/Form";
+import RODiTForm from "./components/Form";
 import SignIn from "./components/SignIn";
-import { RODTset } from "./components/RODTset";
+import { RODiTset } from "./components/RODiTset";
 
 const App = ({ isSignedIn, cableguardForge, wallet }) => {
   const [currentStep, setCurrentStep] = useState(0);
@@ -64,7 +64,7 @@ const App = ({ isSignedIn, cableguardForge, wallet }) => {
   }, []);
 
   const handleMint = async (formData) => {
-    const mint = await cableguardForge.addRODTset(
+    const mint = await cableguardForge.addRODiTset(
       data.clientNumber,
       data.vpnProvider,
       data.vpnDescription,
@@ -133,7 +133,7 @@ const App = ({ isSignedIn, cableguardForge, wallet }) => {
           {tx !== "" ? (
             ""
           ) : isSignedIn ? (
-            <RODTForm
+            <RODiTForm
               data={data}
               step={currentStep}
               setCurrentStep={setCurrentStep}
@@ -147,7 +147,7 @@ const App = ({ isSignedIn, cableguardForge, wallet }) => {
             <SignIn sign={signIn} />
           )}
 
-          {tx !== "" && <RODTset tx={tx} />}
+          {tx !== "" && <RODiTset tx={tx} />}
         </div>
       </div>
     </main>

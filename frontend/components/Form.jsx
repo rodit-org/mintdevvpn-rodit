@@ -3,7 +3,7 @@ import { StepOne } from "./StepOne";
 import { StepThree } from "./StepThree";
 import { StepTwo } from "./StepTwo";
 
-export default function RODTForm({ data, step, prev, next }) {
+export default function RODiTForm({ data, step, prev, next }) {
   const steps = [
     <StepOne next={next} data={data} />,
     <StepTwo next={next} prev={prev} data={data} />,

@@ -1,6 +1,6 @@
 {
   "name": "cableguardforgecontract",
-  "version": "0.93.01",
+  "version": "0.93.13",
   "license": "(MIT AND Apache-2.0)",
   "main": "index.js",
   "type": "module",

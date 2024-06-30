@@ -140,7 +140,7 @@ export function internalRemoveTokenFromOwner(
   }
 }
 
-//transfers the RODT to the receiver_id (internal method and can't be called directly via CLI).
+//transfers the RODiT to the receiver_id (internal method and can't be called directly via CLI).
 export function internalTransfer(
   contract: Contract,
   senderId: string,
@@ -220,7 +220,7 @@ export function internalTransfer(
   let nftTransferLog = {
     // Standard name ("PENDING nepXXX").
     standard: NFT_STANDARD_NAME,
-    // Version of the standard ("RODT-near.org-0.93.01").
+    // Version of the standard ("RODiT-near.org-0.93.13").
     version: NFT_METADATA_SPEC,
     // The data related with the event stored in a vector.
     event: "nft_transfer",
