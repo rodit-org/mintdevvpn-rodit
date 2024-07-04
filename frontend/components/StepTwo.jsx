@@ -10,7 +10,7 @@ export const StepTwo = (props) => {
 
   const initialValues = {
     cidrAddresses: "172.16.0.0/12",
-    vpnPorts: "34543",
+    vpnPorts: "26862",
     dnsServerIp: "1.1.1.1",
   };
 
