@@ -58,7 +58,7 @@ export class Contract extends NearContract {
       versionnumber: "RODiT-near.org-0.93.13",
       name: "Cableguard FORGE",
       symbol: "CGRODiT",
-      base_uri: "cableguard.org",
+      base_uri: "09313-cableguard.org",
     },
   }) {
     super();
