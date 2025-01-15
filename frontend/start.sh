@@ -1,6 +1,10 @@
   GNU nano 7.2                                                                          /home/icarus32/cgforge/frontend/start.sh                                                                                   
 #!/bin/bash
 
+export NEAR_ENV=mainnet
+export BLOCKCHAIN_ENV=mainnet
+export RODITCONTRACTID=rodit-org.near
+
 GREEN='\033[1;32m'
 NC='\033[0m' # No Color
 
