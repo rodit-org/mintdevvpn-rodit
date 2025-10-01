@@ -1,4 +1,7 @@
 #!/bin/bash
+export NEAR_ENV=testnet
+export BLOCKCHAIN_ENV=testnet
+export RODITCONTRACTID=10101-cableguard-org.testnet
 
 GREEN='\033[1;32m'
 NC='\033[0m' # No Color
